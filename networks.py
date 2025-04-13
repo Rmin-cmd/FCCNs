@@ -36,7 +36,7 @@ class CDS_E(nn.Module):
         self.dropout = dropout
         self.num_classes= num_classes
         self.features = nn.Sequential(
-                comp.ComplexConv2d(2, 8, kernel_size= 3, stride= 2),
+                comp.ComplexConv2d(3, 8, kernel_size= 3, stride= 2),
                 compact.CPReLU(),
                 # comp.ComplexMaxPool2d(),
                 comp.ComplexConv2d(8, 16, kernel_size= 3, stride= 2),
